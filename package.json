@@ -1,0 +1,23 @@
+{
+  "name": "week-6",
+  "version": "1.0.0",
+  "description": "app for testing",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AngelxLucero/Week-6.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AngelxLucero/Week-6/issues"
+  },
+  "homepage": "https://github.com/AngelxLucero/Week-6#readme",
+  "dependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0"
+  }
+}
