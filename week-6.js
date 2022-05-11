@@ -19,9 +19,12 @@ class Card {
         return `${this.suit} ${this.value}`;
     }
 }
-
+//example of what a card would look like
 // let c = new Card("clubs", 9);
 // console.log(c.showCard());
+
+//create a deck that contains 52 cards with numbers and suits and
+//their values.
 
      function createDeck(){
         var suits = ["♠", "♣", "♥", "♦"];
@@ -50,6 +53,7 @@ class Card {
         return deck;
     }
 
+//test if the value of the card is recognized
 // if('J' > 'K'){
 //     console.log('Jack wins!');
 // }else{
@@ -57,10 +61,8 @@ class Card {
 // }
 
 
-
-//create a deck that contains 52 cards with numbers and suits
-
 //Shuffle the deck
+
 function shuffleDeck(deck){
 for(var i=0; i <52; i++){
     var tempCard = deck[i];
@@ -71,58 +73,40 @@ for(var i=0; i <52; i++){
 }
 var newDeck = createDeck();
 shuffleDeck(newDeck);
-console.log(newDeck);
-
-// class Players{
-//         constructor(playerOne, playerTwo){
-//             this.playerOne = playerOne;
-//             this.playerTwo = playerTwo;
-//             this.points = 0
-//         }
-//     } 
-//     const playerOne = new Players('Leela');
-//     const playerTwo = new Players("Fry");
+console.log('Here is the shuffled deck: ' + newDeck);
 
 
-let firstPlayer = newDeck.splice(0,26);
-let secondPlayer = newDeck.splice(0,26);
-console.log(firstPlayer);
-console.log(secondPlayer);
+//deal the deck of shuffled cards to two players
 
-//plays one round 
-// function(round){
-// for(var i=0; i < 26; i++){
-// let testOne = firstPlayer.pop();
-// let testTwo = secondPlayer.pop();
-// round[i] = 
-//  }
-// }
-// console.log(testOne, testTwo);
+let Leela = newDeck.splice(0,26);
+let Fry = newDeck.splice(0,26);
+console.log(`Leela's hand: ` + Leela);
+console.log(`Fry's hand: ` + Fry);
 
+//Play the game of War and give a point to the player that has the higher card
+//if result is a tie no one gets a pont. Print the results of the Winner.
 
-// function PlayerHand(round){
-// for(let i=0; i<26; i++){
-//     let testOne = firstPlayer.pop();
-//     let testTwo = secondPlayer.pop();
-// for(let )    
-//     }
-// }
-
-
-
-//Play War by throwing one card down at a time and giving points to the higher card. If tie no points are given.
-
-// class WarGame {
-//     constructor(){
-//         this.Players = [];
-//     }
-
-
-//     var cardPlayed = [];
-//     for(let firstPlayerCounter= 0; firstPlayerCounter < 26; firstPlayerCounter++){
-//         for(let secondPlayerCounter = 0; secondPlayerCounter < 26; secondPlayerCounter++){
-//             cardPlayed.push(firstPlayer[firstPlayerCounter] + secondPlayer[secondPlayerCounter]);
-//         }
-//     }console.log(cardPlayed);
-// }
+let herScore = 0;
+let hisScore = 0;
+for(i=0; i <= 25; i++){
+    if(Leela[i] > Fry[i]){
+        console.log(`Leela: ${Leela[i]} Fry: ${Fry[i]} Leela wins!`);
+        herScore +=1;
+    }else if(Leela[i] < Fry[i]){
+            console.log(`Leela: ${Leela[i]} Fry: ${Fry[i]} Fry wins!` )
+            hisScore +=1;
+    }
+    else if(Leela[i] === Fry[i]){
+        console.log(`Leela: ${Leela[i]} Fry: ${Fry[i]} Tie` )
+        hisScore += 0; herScore +=0;
+    }
+    console.log(herScore, hisScore)
+ }
+if(herScore > hisScore){
+    console.log(`Leela wins! ${herScore} to ${hisScore}`);
+}else if(herScore < hisScore){
+    console.log(`Fry wins! ${herScore} to ${hisScore}`);
+}else{
+    console.log(`No one wins as it is a Tie`);
+}
 
