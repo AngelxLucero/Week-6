@@ -19,6 +19,7 @@ class Card {
         return `${this.suit} ${this.value}`;
     }
 }
+
 //example of what a card would look like
 // let c = new Card("clubs", 9);
 // console.log(c.showCard());
@@ -52,6 +53,8 @@ class Card {
         }
         return deck;
     }
+var completeDeck = createDeck();
+console.log(`Here is the complete Deck of Cards: ${completeDeck}`);
 
 //test if the value of the card is recognized
 // if('J' > 'K'){
@@ -73,7 +76,9 @@ for(var i=0; i <52; i++){
 }
 var newDeck = createDeck();
 shuffleDeck(newDeck);
-console.log('Here is the shuffled deck: ' + newDeck);
+console.log('Here is the shuffled deck of cards: ' + newDeck);
+
+console.log(`Deal hands to two Players`);
 
 
 //deal the deck of shuffled cards to two players
@@ -84,7 +89,8 @@ console.log(`Leela's hand: ` + Leela);
 console.log(`Fry's hand: ` + Fry);
 
 //Play the game of War and give a point to the player that has the higher card
-//if result is a tie no one gets a pont. Print the results of the Winner.
+//if result is a tie no one gets a pont. 
+console.log(`Play Game of War!`)
 
 let herScore = 0;
 let hisScore = 0;
@@ -102,11 +108,14 @@ for(i=0; i <= 25; i++){
     }
     console.log(herScore, hisScore)
  }
+
+//Print the results of the Winner.
+
 if(herScore > hisScore){
     console.log(`Leela wins! ${herScore} to ${hisScore}`);
 }else if(herScore < hisScore){
     console.log(`Fry wins! ${herScore} to ${hisScore}`);
 }else{
-    console.log(`No one wins as it is a Tie`);
+    console.log(`No one wins, it is a Tie :( `);
 }
 
