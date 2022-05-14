@@ -44,7 +44,7 @@ class Card {
             'Q': 12,
             'K': 13,
             'A': 14,
-        }
+        }  
         var deck = []
     for(let suitCounter = 0; suitCounter < 4; suitCounter++){
         for(let valueCounter = 0; valueCounter < 13; valueCounter++){
@@ -76,7 +76,7 @@ for(var i=0; i <52; i++){
 }
 var newDeck = createDeck();
 shuffleDeck(newDeck);
-console.log('Here is the shuffled deck of cards: ' + newDeck);
+console.log(`Here is the shuffled deck of cards: ${newDeck}`);
 
 console.log(`Deal hands to two Players`);
 
@@ -118,4 +118,6 @@ if(herScore > hisScore){
 }else{
     console.log(`No one wins, it is a Tie :( `);
 }
+
+
 
